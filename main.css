@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    padding-top: 40px;
+}
+
+aside, section {
+    display: inline-block;
+    vertical-align: top;
+}
+
+aside {
+    width: 20%;
+    border: 1px solid grey;
+    border-bottom: none;
+}
+
+.container {
+    width: 70%;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section {
+    width: 60%;
+    margin-top: 20px;
+}
+
+.form {
+    margin-left: 40%;
+}
+
+.form label, .input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.category {
+    height: 50px;
+    border-bottom: 1px solid grey;
+    padding-left: 13px;
+    padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
