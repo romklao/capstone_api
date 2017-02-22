@@ -110,8 +110,7 @@ button {
     border-radius: 0px 3px 3px 0px;
 }
 
-button:hover/*, button:focus */{
-    /*content: url('images/search-pink.png');*/
+button:hover {
     border: 1px solid #DB84AF;
     border-radius: 3px;
     transform: scale(1.03);
@@ -161,7 +160,7 @@ span {
     width: 100%;
 }
 
-/*@media (max-width: 700px) {
+@media (max-width: 700px) {
     body {
         padding-top: 10%;
     }
@@ -204,11 +203,11 @@ span {
         width: 92%;
     }
     .searchIcon {
-        
+
     }
 }
 
-*/
+
 
 
 
