@@ -102,7 +102,7 @@ label > p {
 }
 
 button {
-    width: 36px;
+    width: 4%;
     height: 35px;
     background-color: white;
     border: 1px solid #D0D0D0;
@@ -201,6 +201,9 @@ span {
     }
     .information {
         width: 92%;
+    }
+    button {
+        width: 10%;
     }
 }
 
