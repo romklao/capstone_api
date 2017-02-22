@@ -96,9 +96,9 @@ label > p {
     border: 1px solid #DB84AF;
     border-radius: 3px;
     color: #DB84AF;
-    -moz-box-shadow: 0 0 10px #DB84AF; 
+    /*-moz-box-shadow: 0 0 10px #DB84AF; 
     -webkit-box-shadow: 0 0 10px #DB84AF; 
-    box-shadow: 0 0 3px #DB84AF;
+    box-shadow: 0 0 3px #DB84AF;*/
 }
 
 button {
@@ -113,10 +113,10 @@ button {
 button:hover {
     border: 1px solid #DB84AF;
     border-radius: 3px;
-    transform: scale(1.03);
-    -moz-box-shadow: 0 0 10px #DB84AF; 
+    /*transform: scale(1.03);*/
+    /*-moz-box-shadow: 0 0 10px #DB84AF; 
     -webkit-box-shadow: 0 0 10px #DB84AF; 
-    box-shadow: 0 0 5px #DB84AF;
+    box-shadow: 0 0 5px #DB84AF;*/
 }
 
 .showInfo, .showImage {
@@ -201,9 +201,6 @@ span {
     }
     .information {
         width: 92%;
-    }
-    .searchIcon {
-
     }
 }
 
