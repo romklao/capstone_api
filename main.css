@@ -161,7 +161,7 @@ span {
     width: 100%;
 }
 
-@media (max-width: 700px) {
+/*@media (max-width: 700px) {
     body {
         padding-top: 10%;
     }
@@ -203,9 +203,12 @@ span {
     .information {
         width: 92%;
     }
+    .searchIcon {
+        
+    }
 }
 
-
+*/
 
 
 
