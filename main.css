@@ -3,19 +3,13 @@
     margin: 0 auto;
 }
 
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 body {
-    padding-top: 50px;
-}
-
-aside, section {
-    display: inline-block;
-    vertical-align: top;
-}
-
-aside {
-    width: 35%;
-    border: 1px solid grey;
-    border-bottom: none;
+    padding-top: 10%;
 }
 
 .container {
@@ -23,33 +17,195 @@ aside {
     background-color: white;
     margin-right: auto;
     margin-left: auto;
-}
-
-section {
-    width: 60%;
-    margin-top: 20px;
-}
-
-.form {
-    margin-left: 40%;
-}
-
-.form label, .input {
-    display: block;
-    margin-bottom: 10px;
-}
-
-header {
     text-align: center;
-    margin-bottom: 50px;
 }
 
-.category {
-    height: 50px;
-    border-bottom: 1px solid grey;
-    padding-left: 13px;
-    padding-top: 15px;
+header > h2 {
+    color: #508DCE;
+    font-size: 35px;
+    margin-bottom: 30px;
 }
+
+header > h2:hover {
+    color: #E376AC;
+    transform: scale(1.04);
+}
+
+label > p input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute;  /*Remove input from document flow */
+}
+
+label {
+    width: 60px;
+    height: 65px;
+    cursor:pointer;
+    display: inline-block;
+    border-radius: 2px;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+
+label:before {
+    margin-left: 22%;
+}
+
+label:hover, label:focus {
+    transform: scale(1.1);
+}
+
+label > p:hover {
+    color: #DB84AF;
+    text-decoration: underline;
+}
+
+label:hover::before {
+    content: url('images/hearts.png');
+    position: absolute;
+}
+
+label > p > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
+    background-color: #EBB0CD;
+    border-radius: 2px;
+}
+
+input + img {
+    width: 25px;
+}
+
+label > p {
+    color: #68A7D4;
+    font-size: 9px;
+}
+
+#js-input {
+    width: 50%;
+    height: 35px;
+    color: #848484;
+    font-size: 14px;
+    border: 1px solid #D0D0D0;
+    border-radius: 3px 0px 0px 3px;
+    border-right: none;
+    margin-top: 15px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#js-input:hover {
+    border: 1px solid #DB84AF;
+    border-radius: 3px;
+    color: #DB84AF;
+    -moz-box-shadow: 0 0 10px #DB84AF; 
+    -webkit-box-shadow: 0 0 10px #DB84AF; 
+    box-shadow: 0 0 3px #DB84AF;
+}
+
+button {
+    width: 36px;
+    height: 35px;
+    background-color: white;
+    border: 1px solid #D0D0D0;
+    border-left: #E9EBEE;
+    border-radius: 0px 3px 3px 0px;
+}
+
+button:hover/*, button:focus */{
+    /*content: url('images/search-pink.png');*/
+    border: 1px solid #DB84AF;
+    border-radius: 3px;
+    transform: scale(1.03);
+    -moz-box-shadow: 0 0 10px #DB84AF; 
+    -webkit-box-shadow: 0 0 10px #DB84AF; 
+    box-shadow: 0 0 5px #DB84AF;
+}
+
+.showInfo, .showImage {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.showImage {
+    border-radius: 2px;
+    margin-left: 3%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.showInfo {
+    margin-top: 16px;
+    margin-left: 3%;
+    color: #A3A5A8;
+    font-size: 13px;
+}
+
+.information {
+    width: 80%;
+}
+
+span {
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+#searchIcon {
+    height: 30px;
+    padding: 4px 6px 7px 3px;
+    
+}
+
+#map {
+    margin-top: 35px;
+    margin-bottom: 22px;
+    height: 540px;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding-top: 10%;
+    }
+    .container {
+        width: 100%
+    }
+    header > h2 {
+        font-size: 18px;
+    }
+    input + img {
+        width: 18px;
+    }
+    label {
+        width: 45px;
+
+    }
+    label > p {
+        font-size: 7px;
+    }
+    #js-input {
+        font-size: 13px;
+        width: 70%;
+        margin-top: 5px;
+    }
+    #map {
+        height: 250px;
+    }
+    .showImage {
+        display: block;
+        width: 100px;
+        margin-top: 3px;
+        margin-left: 5px;
+    }
+    .showInfo {
+        font-size: 12px;
+        margin-top: 3px;
+        margin-left: 5px;
+    }
+    .information {
+        width: 92%;
+    }
+}
+
+
 
 
 

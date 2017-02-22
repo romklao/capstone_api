@@ -7,48 +7,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" href="/maps/documentation/javascript/demos/demos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-        #map {
-        height: 400px;
-        width: 100%;
-        }
-    </style>
-    
 </head>
 <body>
     <main class="container">
         <header>
-            <h2>Recommended Places for Couple</h2>
+            <h2>Romantic Places</h2>
         </header>
-        <aside>
-            <h4 class="category">Top Pick</h4>
-            <h4 class="category">Popular</h4>
-            <h4 class="category">Food</h4>
-            <h4 class="category">Nature</h4>
-            <h4 class="category">Nightlife</h4>
-        </aside>
+        <form>
+            <label>
+                <p><input class="checked" type="radio" name="category" value="topPicks"><img id="imageChecked" src="images/trophy-shape.png"></p>
+                <p>Top picks</p>
+            </label>
+            <label>
+                <p><input id="checked" type="radio" name="category" value="trending"><img src="images/stats-analysis.png"></p>
+                <p>Trending</p>
+            </label>
+            <label>
+                <p><input class="checked" type="radio" name="category" value="food"><img src="images/dinner.png"></p>
+                <p>Restaurants</p>
+            </label>
+            <label>
+                <p><input class="checked" type="radio" name="category" value="sights"><img src="images/tree.png"></p>
+                <p>Sights</p>
+            </label>
+            <label>
+                <p><input class="checked" type="radio" name="category" value="drinks"><img src="images/cheers.png"></p>
+                <p>Nightlife</p>
+            </label>
+        </form>
         <section>
-            <form class="js-search-form">
-                <label for="location">Location</label>
-                <input class="js-input" type="text" name="search">
-
-                <!-- <label for="distance">Distance</label>
-                <input class="input" type="text" name="distance"> -->
-
-                <button type="submit">Search</button>
+            <form id="js-search-form">
+                <input id="js-input" type="text" name="search" placeholder="Select the category and enter your location"><span class="spanImage"><button type="submit"><img id="searchIcon" src="images/search.png"></button></span>
             </form>
-        </section>
-        <div class="js-place-info">
-            
-        </div>
+        </section>        
     </main>
-    <div id="map"></div>
+    <div class="information">
+        <div id="map"></div>
+        <div id="js-place-info"></div>
+    </div>
     
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqAzetfWusypCLeR3E5Wg5njcfp7a_e8w&callback=initMap"
-    async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqAzetfWusypCLeR3E5Wg5njcfp7a_e8w"async defer></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
+
+
+
