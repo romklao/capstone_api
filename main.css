@@ -64,14 +64,8 @@ label > p:hover {
     text-decoration: underline;
 }
 
-/*label:hover::before {
-
-    position: absolute;
-}*/
-
 label > p > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
     content: url('images/1487854257_88.png');
-    /*background-color: #EBB0CD;*/
     border-radius: 2px;
 }
 
@@ -162,7 +156,7 @@ span {
     width: 100%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
     body {
         padding-top: 10%;
     }
@@ -206,6 +200,7 @@ span {
     }
     button {
         width: 35px;
+        padding-right: 4px;
     }
 }
 
