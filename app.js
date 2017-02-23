@@ -15,7 +15,7 @@ function getDataFromApi(location, category, callback) {
             query: 'romantic',
             section: category,
             venuePhotos: '1',
-            limit: '10',
+            // limit: '10',
             radius: '10000',
             v: version,
             client_id: client_id,
@@ -53,51 +53,40 @@ function displaySearchData(data) {
             var size = "180x165";
             var imageLink = prefix + size + suffix;
             
-            var name = "unknown";
-            var rating = "unknown";
-            var phone = "unknown";
-            var hours = "unknown";
-            var website = "unknown";
-            var address = "unknown";
+            var currentElement = '<img class="showImage" src="' + imageLink + '">';
+                currentElement += '<div class="showInfo">'
+            var name = rating = phone = website = address = "unknown";
 
-            if(item.venue.hours && item.venue.hours.status) {
-                hours = item.venue.hours.status;
-            }
             if(item.venue.name) {
-                name = item.venue.name;
+                currentElement += '<p><span>Name:</span>' + item.venue.name + '</p>'
             }
             if(item.venue.rating) {
-                rating = item.venue.rating;
+                currentElement += '<p><span>Rating:</span>' + item.venue.rating + '</p>'
             }
             if(item.venue.contact && item.venue.contact.phone) {
-                contact = item.venue.contact.phone;
+                currentElement += '<p><span>Phone:</span>' + item.venue.contact.phone + '</p>'
+            }
+            if(item.venue.hours && item.venue.hours.status) {
+                currentElement += '<p><span>Status:</span>' + item.venue.hours.status + '</p>'
             }
             if(item.venue.url) {
-                website = item.venue.url;
+                currentElement += '<p><span>Website:</span>' + '<a href="' + item.venue.url + '" target="_blank">' + item.venue.url + '</a></p>'
             }
             if(item.venue.location && item.venue.location.formattedAddress) {
-                address = item.venue.location.formattedAddress[0] + ', ' + 
-                          item.venue.location.formattedAddress[1];
+                currentElement += '<p><span>Address:</span>' + item.venue.location.formattedAddress[0] + ', '
+                                  + item.venue.location.formattedAddress[1]; + ' </p>'
             }
-            var currentElement =  '<img class="showImage" src="' + imageLink + '">' +
-                                    '<div class="showInfo">' +
-                                        '<p><span>Name:</span>' + name + '</p>' + 
-                                        '<p><span>Rating:</span>' + rating + '</p>' + 
-                                        '<p><span>Phone:</span>' + contact + '</p>' +
-                                        '<p><span>Status:</span>' + hours + '</p>' +
-                                        '<p><span>Website:</span>' + '<a href="' + website + '" target="_blank">' + website + '</a></p>' +
-                                        '<p><span>Address:</span>' + address + ' </p>' + 
-                                    '</div><hr>' 
+            currentElement += '</div><hr>'
             resultElement += currentElement
 
             var myLatLng = {lat: item.venue.location.lat, lng: item.venue.location.lng};
             var infowindow = new google.maps.InfoWindow({
-              content: currentElement,
+                content: currentElement,
             });
             var marker = new google.maps.Marker({
-              position: myLatLng,
-              map: map,
-              title: item.venue.name
+                position: myLatLng,
+                map: map,
+                title: item.venue.name
             });
 
             marker.addListener('click', function() {

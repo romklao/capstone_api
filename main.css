@@ -54,28 +54,29 @@ label:hover, label:focus {
     transform: scale(1.1);
 }
 
+label > p {
+    color: #68A7D4;
+    font-size: 9px;
+}
+
 label > p:hover {
     color: #DB84AF;
     text-decoration: underline;
 }
 
-label:hover::before {
-    content: url('images/hearts.png');
+/*label:hover::before {
+
     position: absolute;
-}
+}*/
 
 label > p > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
-    background-color: #EBB0CD;
+    content: url('images/1487854257_88.png');
+    /*background-color: #EBB0CD;*/
     border-radius: 2px;
 }
 
 input + img {
-    width: 25px;
-}
-
-label > p {
-    color: #68A7D4;
-    font-size: 9px;
+    width: 23px;
 }
 
 #js-input {
@@ -102,7 +103,7 @@ label > p {
 }
 
 button {
-    width: 4%;
+    width: 37px;
     height: 35px;
     background-color: white;
     border: 1px solid #D0D0D0;
@@ -113,11 +114,12 @@ button {
 button:hover {
     border: 1px solid #DB84AF;
     border-radius: 3px;
-    /*transform: scale(1.03);*/
-    /*-moz-box-shadow: 0 0 10px #DB84AF; 
+    transform: scale(1.03);
+    -moz-box-shadow: 0 0 10px #DB84AF; 
     -webkit-box-shadow: 0 0 10px #DB84AF; 
-    box-shadow: 0 0 5px #DB84AF;*/
+    box-shadow: 0 0 5px #DB84AF;
 }
+
 
 .showInfo, .showImage {
     display: inline-block;
@@ -203,10 +205,9 @@ span {
         width: 92%;
     }
     button {
-        width: 10%;
+        width: 35px;
     }
 }
-
 
 
 
