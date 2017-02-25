@@ -53,7 +53,7 @@ function displaySearchData(data) {
             var size = "180x165";
             var imageLink = prefix + size + suffix;
             
-            var currentElement = '<img class="showImage" src="' + imageLink + '">';
+            var currentElement = '<a href="' + item.venue.url + '" target="_blank">' + '<img class="showImage" src="' + imageLink + '">' + '</a>';
                 currentElement += '<div class="showInfo">'
             var name = rating = phone = website = address = "unknown";
 
