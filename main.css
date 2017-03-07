@@ -22,7 +22,7 @@ body {
 
 header > h2 {
     color: #508DCE;
-    font-size: 35px;
+    font-size: 47px;
     margin-bottom: 30px;
 }
 
@@ -56,7 +56,7 @@ label:hover, label:focus {
 
 label > p {
     color: #68A7D4;
-    font-size: 9px;
+    font-size: 12px;
 }
 
 label > p:hover {
@@ -70,21 +70,21 @@ label > p > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 input + img {
-    width: 23px;
+    width: 28px;
 }
 
 #js-input {
-    width: 50%;
-    height: 35px;
+    width: 55%;
+    height: 40px;
     color: #848484;
-    font-size: 14px;
+    font-size: 15px;
     border: 1px solid #D0D0D0;
     border-radius: 3px 0px 0px 3px;
     border-right: none;
-    margin-top: 15px;
+    margin-top: 20px;
     padding-left: 5px;
     padding-top: 2px;
-    padding-bottom: 2px;
+    padding-bottom: 6px;
 }
 
 #js-input:hover {
@@ -97,12 +97,13 @@ input + img {
 }
 
 button {
-    width: 37px;
-    height: 35px;
+    width: 42px;
+    height: 40px;
     background-color: white;
     border: 1px solid #D0D0D0;
     border-left: #E9EBEE;
     border-radius: 0px 3px 3px 0px;
+    padding-right: 2px;
 }
 
 button:hover {
@@ -115,32 +116,80 @@ button:hover {
 }
 
 
-.showInfo, .showImage {
+.showInfo, .containerImage {
     display: inline-block;
     vertical-align: top;
 }
 
+.containerImage {
+    position: relative;
+}
+
 .showImage {
-    border-radius: 2px;
-    margin-left: 3%;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-left: 12%;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+
+.containerImage:hover .showImage {
+  opacity: 1;
+}
+
+.containerImage:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 17px;
+  padding: 3px;
+}
+
+.showImage {
+     border-radius: 3px;
 }
 
 .showInfo {
-    margin-top: 16px;
-    margin-left: 3%;
+    width: 65%;
+    margin-top: 20px;
+    margin-left: 7%;
     color: #A3A5A8;
-    font-size: 13px;
+    font-size: 16px;
+}
+
+.name {
+    color: #508DCE;
 }
 
 .information {
     width: 80%;
 }
 
-span {
-    font-weight: bold;
+.phone {
     margin-right: 4px;
+}
+
+.rating {
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 15px;
+    border-radius: 6px;
+    float: right;
 }
 
 #searchIcon {
@@ -185,14 +234,13 @@ span {
         height: 250px;
     }
     .showImage {
-        display: block;
+        /*display: block;*/
         width: 100px;
         margin-top: 3px;
         margin-left: 5px;
     }
     .showInfo {
         font-size: 12px;
-        margin-top: 3px;
         margin-left: 5px;
     }
     .information {

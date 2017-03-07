@@ -53,28 +53,29 @@ function displaySearchData(data) {
             var size = "180x165";
             var imageLink = prefix + size + suffix;
             
-            var currentElement = '<a href="' + item.venue.url + '" target="_blank">' + '<img class="showImage" src="' + imageLink + '">' + '</a>';
-                currentElement += '<div class="showInfo">'
+            var currentElement = '<div class="containerImage">' + 
+                                    '<a href="' + item.venue.url + '" target="_blank">' + '<img style="width:100%" class="showImage" src="' + imageLink + '">' +
+                                    '<div class="middle">' +
+                                        '<div class="text">Visit Website</div>' +
+                                    '</div>' + '</a>' +
+                                 '</div>'
+            currentElement += '<div class="showInfo">'
             var name = rating = phone = website = address = "unknown";
 
             if(item.venue.name) {
-                currentElement += '<p><span>Name:</span>' + item.venue.name + '</p>'
-            }
-            if(item.venue.rating) {
-                currentElement += '<p><span>Rating:</span>' + item.venue.rating + '</p>'
-            }
-            if(item.venue.contact && item.venue.contact.phone) {
-                currentElement += '<p><span>Phone:</span>' + item.venue.contact.phone + '</p>'
-            }
+                currentElement += '<a href="' + item.venue.url + '" target="_blank">' +
+                                  '<h3 class="name"><span style="min-width:100%">' + item.venue.name + '</span>' + '</a>'
+                if(item.venue.rating) {
+                    currentElement += '<span class="rating" style="background-color: #'+ item.venue.ratingColor +'">' + item.venue.rating + '</span>'
+                }
+                currentElement += '</h3>'
+            }            
             if(item.venue.hours && item.venue.hours.status) {
-                currentElement += '<p><span>Status:</span>' + item.venue.hours.status + '</p>'
+                currentElement += '<p>' + item.venue.hours.status + '</p>'
             }
-            if(item.venue.url) {
-                currentElement += '<p><span>Website:</span>' + '<a href="' + item.venue.url + '" target="_blank">' + item.venue.url + '</a></p>'
-            }
-            if(item.venue.location && item.venue.location.formattedAddress) {
-                currentElement += '<p><span>Address:</span>' + item.venue.location.formattedAddress[0] + ', '
-                                  + item.venue.location.formattedAddress[1]; + ' </p>'
+            if(item.venue.location && item.venue.location.formattedAddress && item.venue.contact && item.venue.contact.phone) {
+                currentElement += '<p>' + item.venue.location.formattedAddress[0] + ', '
+                                  + item.venue.location.formattedAddress[1] + ' <span class="phone">| Phone:</span>' + item.venue.contact.phone +  '</p>'
             }
             currentElement += '</div><hr>'
             resultElement += currentElement
