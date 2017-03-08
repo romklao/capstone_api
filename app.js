@@ -50,7 +50,7 @@ function displaySearchData(data) {
             var photoInfo = item.venue.photos.groups[0].items[0];
             var prefix = photoInfo.prefix;
             var suffix = photoInfo.suffix;
-            var size = "180x165";
+            var size = "230x200";
             var imageLink = prefix + size + suffix;
             
             var currentElement = '<div class="containerImage">' + 
@@ -63,8 +63,8 @@ function displaySearchData(data) {
             var name = rating = phone = website = address = "unknown";
 
             if(item.venue.name) {
-                currentElement += '<a href="' + item.venue.url + '" target="_blank">' +
-                                  '<h3 class="name"><span style="min-width:100%">' + item.venue.name + '</span>' + '</a>'
+                currentElement += '<a class="name" href="' + item.venue.url + '" target="_blank">' +
+                                  '<h3><span style="min-width:100%">' + item.venue.name + '</span>' + '</a>'
                 if(item.venue.rating) {
                     currentElement += '<span class="rating" style="background-color: #'+ item.venue.ratingColor +'">' + item.venue.rating + '</span>'
                 }

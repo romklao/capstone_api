@@ -4,9 +4,9 @@
 }
 
 html {
-    background: url(../capstone_api/images/bluesky.jpg) no-repeat center center fixed;
+    background: url(../capstone_api/images/heart3-background.jpg) no-repeat center center fixed;
     background-size: cover;
-    height: 100%;
+    /*height: 100%;*/
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -40,7 +40,9 @@ html {
     font-size: 38px;
 }
 
+
 .content {
+    margin-top: 40px;
     position: absolute;
     top: 100%;
     left: 0;
@@ -54,22 +56,28 @@ header {
 }
 
 .container {
-    width: 45%;
-    background-color: white;
-    margin-top: 45px;
+    background: url(../capstone_api/images/red3-background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    padding-top: 5%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 40px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
 }
 
 header > h2 {
-    color: #508DCE;
+    color: white;
     font-size: 43px;
+    font-weight: bold;
     margin-bottom: 30px;
 }
 
 header > h2:hover {
-    color: #E376AC;
+    color: #BF0000;
     transform: scale(1.04);
 }
 
@@ -97,22 +105,22 @@ label:hover, label:focus {
 }
 
 label > p {
-    color: #68A7D4;
-    font-size: 12px;
+    color: white;
+    font-size: 13px;
 }
 
 label > p:hover {
-    color: #DB84AF;
+    color: #BF0000;
     text-decoration: underline;
 }
 
 label > p > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
-    content: url('images/1487854257_88.png');
+    content: url('images/1487853173_heart.png');
     border-radius: 2px;
 }
 
 input + img {
-    width: 28px;
+    width: 35px;
 }
 
 #js-input {
@@ -124,6 +132,7 @@ input + img {
     border-radius: 3px 0px 0px 3px;
     border-right: none;
     margin-top: 20px;
+    margin-bottom: 30px;
     padding-left: 5px;
     padding-top: 2px;
     padding-bottom: 6px;
@@ -132,7 +141,7 @@ input + img {
 #js-input:hover {
     border: 1px solid #DB84AF;
     border-radius: 3px;
-    color: #DB84AF;
+    color: #BF0000;
     /*-moz-box-shadow: 0 0 10px #DB84AF; 
     -webkit-box-shadow: 0 0 10px #DB84AF; 
     box-shadow: 0 0 3px #DB84AF;*/
@@ -165,16 +174,16 @@ button:hover {
 
 .containerImage {
     position: relative;
-    margin-left: 3%;
+    margin-left: 6%;
 }
 
 .showImage {
-    margin-top: 17px;
-    margin-bottom: 17px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     opacity: 1;
     display: block;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 6px;
     transition: .5s ease;
     backface-visibility: hidden;
 }
@@ -184,7 +193,7 @@ button:hover {
     opacity: 0;
     position: absolute;
     top: 40%;
-    left: 22%;
+    left: 30%;
 }
 
 .containerImage:hover .showImage {
@@ -197,28 +206,36 @@ button:hover {
 
 .text {
     color: white;
-    font-size: 16px;
+    font-size: 17px;
     padding: 3px;
 }
 
 .showInfo {
-    width: 60%;
+    width: 50%;
     margin-top: 20px;
-    margin-left: 3%;
-    color: #777777;
-    font-size: 16px;
-}
-
-.name {
-    color: #508DCE;
+    margin-left: 5%;
+    color: black;
+    font-size: 17px;
 }
 
 .information {
-    width: 80%;
+    /*background: url(../capstone_api/images/red3-background.jpg) no-repeat center center fixed;
+    background-size: cover;*/
+    width: 100%;
+    margin-top: 40px;
+    /*padding-top: 40px;*/
+
+    /*padding-top: 20px;*/
+    /*background: url(../capstone_api/images/red-background.jpg) no-repeat center center fixed;
+    background-size: cover;*/
 }
 
 .phone {
     margin-right: 4px;
+}
+
+.name {
+    color: #00B551;
 }
 
 .rating {
@@ -226,7 +243,7 @@ button:hover {
     font-size: 15px;
     padding: 5px;
     margin-left: 15px;
-    border-radius: 6px;
+    border-radius: 7px;
     float: right;
 }
 
@@ -237,8 +254,9 @@ button:hover {
 }
 
 #map {
-    margin-top: 35px;
-    margin-bottom: 22px;
+   /* background: url(../capstone_api/images/pink3-background.png) no-repeat center center fixed;
+    background-size: cover;*/
+    margin-bottom: 20px;
     height: 540px;
     width: 100%;
 }
