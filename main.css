@@ -3,18 +3,60 @@
     margin: 0 auto;
 }
 
+html {
+    background: url(../capstone_api/images/bluesky.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.title h1, .title h2 {
+    font-weight: normal;
+}
+
+.title h1 {
+    font-size: 45px;
+}
+
+.title h2{
+    font-size: 38px;
+}
+
+.content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+}
+
 header {
     text-align: center;
     margin-bottom: 30px;
 }
 
-body {
-    padding-top: 10%;
-}
-
 .container {
     width: 45%;
     background-color: white;
+    margin-top: 45px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -22,7 +64,7 @@ body {
 
 header > h2 {
     color: #508DCE;
-    font-size: 47px;
+    font-size: 43px;
     margin-bottom: 30px;
 }
 
@@ -127,11 +169,11 @@ button:hover {
 }
 
 .showImage {
-    
     margin-top: 17px;
     margin-bottom: 17px;
     opacity: 1;
     display: block;
+    width: 100%;
     border-radius: 3px;
     transition: .5s ease;
     backface-visibility: hidden;
@@ -142,7 +184,7 @@ button:hover {
     opacity: 0;
     position: absolute;
     top: 40%;
-    left: 20%;
+    left: 22%;
 }
 
 .containerImage:hover .showImage {
@@ -155,15 +197,15 @@ button:hover {
 
 .text {
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     padding: 3px;
 }
 
 .showInfo {
-    width: 65%;
+    width: 60%;
     margin-top: 20px;
-    margin-left: 5%;
-    color: #A3A5A8;
+    margin-left: 3%;
+    color: #777777;
     font-size: 16px;
 }
 
@@ -201,12 +243,16 @@ button:hover {
     width: 100%;
 }
 
-@media (max-width: 500px) {
-    body {
-        padding-top: 10%;
-    }
+@media (max-width: 700px) {
+
     .container {
         width: 100%
+    }
+    .title h1 {
+        font-size: 22px;
+    }
+    .title h2 {
+        font-size: 19px;
     }
     header > h2 {
         font-size: 18px;
@@ -257,17 +303,6 @@ button:hover {
         padding: 3px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

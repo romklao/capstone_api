@@ -73,9 +73,12 @@ function displaySearchData(data) {
             if(item.venue.hours && item.venue.hours.status) {
                 currentElement += '<p>' + item.venue.hours.status + '</p>'
             }
-            if(item.venue.location && item.venue.location.formattedAddress && item.venue.contact && item.venue.contact.phone) {
-                currentElement += '<p>' + item.venue.location.formattedAddress[0] + ', '
-                                  + item.venue.location.formattedAddress[1] + ' <span class="phone">| Phone:</span>' + item.venue.contact.phone +  '</p>'
+            if(item.venue.location && item.venue.location.formattedAddress) {
+                currentElement += '<p>' + item.venue.location.formattedAddress[0] + ', ' 
+                                  + item.venue.location.formattedAddress[1] + '</p>'
+                if(item.venue.contact && item.venue.contact.phone) {
+                    currentElement += ' <p class="phone">Phone: ' + item.venue.contact.phone + '</p>'
+                }
             }
             currentElement += '</div><hr>'
             resultElement += currentElement
