@@ -4,8 +4,9 @@
 }
 
 html {
-    background: url(../capstone_api/images/heart3-background.jpg) no-repeat center center fixed;
-    background-size: cover;
+    background: url(../capstone_api/images/pink5-background.jpg) no-repeat;
+    background-size: 100% 50%;
+    /*opacity: 0.8;*/
     /*height: 100%;*/
 
     -webkit-background-size: cover;
@@ -166,6 +167,9 @@ button:hover {
     box-shadow: 0 0 5px #DB84AF;
 }
 
+.imageAndInfo {
+    background-color: rgba(255, 255, 255, 0.7);
+}
 
 .showInfo, .containerImage {
     display: inline-block;
@@ -275,16 +279,32 @@ hr {
     width: 100%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
 
+    html {
+        height: 80%;
+        background-size: 500px;
+    }
+    .title {
+        top: 17%;
+    }
     .container {
-        width: 100%
+        width: 100%;
+        height: 260px;
+    }
+    .content {
+        top: 30%;
+
+    }
+    .information {
+        background-size: cover;
+        height: 80%
     }
     .title h1 {
-        font-size: 22px;
+        font-size: 20px;
     }
     .title h2 {
-        font-size: 19px;
+        font-size: 17px;
     }
     header > h2 {
         font-size: 18px;

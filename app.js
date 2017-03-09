@@ -40,27 +40,37 @@ function initMap() {
 function displaySearchData(data) {
     var resultElement = '';
     if(data.response) {
-        console.log('data');
+        console.log('data', data);
         initMap();
 
         var bounds = new google.maps.LatLngBounds();
-
+    if(!data.response.groups) {
+        alert("no results");
+        return 
+    }
         data.response.groups[0].items.forEach(function(item) {
             console.log('getdata', item)
-            var photoInfo = item.venue.photos.groups[0].items[0];
-            var prefix = photoInfo.prefix;
-            var suffix = photoInfo.suffix;
-            var size = "230x200";
-            var imageLink = prefix + size + suffix;
-            var currentElement;
+            if (item.venue.photos.groups[0]) {
+                var photoInfo = item.venue.photos.groups[0].items[0];
+                var prefix = photoInfo.prefix;
+                var suffix = photoInfo.suffix;
+                var size = "230x200";
+                var imageLink = prefix + size + suffix;
+                var currentElement;
+            }
+            else {
+                return 
+            }
 
-            currentElement = '<div class="containerImage">' + 
+            currentElement = '<div class="imageAndInfo">'
+            currentElement += '<div class="containerImage">' + 
                                     '<a href="' + item.venue.url + '" target="_blank">' + '<img class="showImage" src="' + imageLink + '">' +
                                     '<div class="middle">' +
                                         '<div class="text">Visit Website</div>' +
                                     '</div>' + '</a>' +
-                                 '</div>'
+                              '</div>'
             currentElement += '<div class="showInfo">'
+            
 
             if(item.venue.name) {
                 currentElement += '<a class="name" href="' + item.venue.url + '" target="_blank">' +
@@ -80,6 +90,7 @@ function displaySearchData(data) {
                     currentElement += ' <p class="phone">Phone: ' + item.venue.contact.phone + '</p>'
                 }
             }
+            currentElement += '</div>'
             currentElement += '</div><hr>'
             resultElement += currentElement
 
