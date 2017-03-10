@@ -19,7 +19,7 @@ html {
 ul {
     list-style-type: none;
     right: 8%;
-    margin-top: 20px;
+    margin-top: 25px;
     position: absolute;
 }
 
@@ -325,7 +325,7 @@ hr {
     }
     #login, #signup {
         font-size: 12px;
-        margin-left: -20px;
+        margin-left: -18px;
     }
     .title {
         top: 120px;
