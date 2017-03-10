@@ -39,24 +39,26 @@ function initMap() {
 
 function displaySearchData(data) {
     var resultElement = '';
+    var currentElement;
     if(data.response) {
         console.log('data', data);
+
         initMap();
 
         var bounds = new google.maps.LatLngBounds();
-    if(!data.response.groups) {
-        alert("no results");
-        return 
-    }
+
+        if(!data.response.groups) {
+            alert("no results");
+            return 
+        }
         data.response.groups[0].items.forEach(function(item) {
-            console.log('getdata', item)
+            console.log('item', item)
             if (item.venue.photos.groups[0]) {
                 var photoInfo = item.venue.photos.groups[0].items[0];
                 var prefix = photoInfo.prefix;
                 var suffix = photoInfo.suffix;
-                var size = "230x200";
+                var size = "210x190";
                 var imageLink = prefix + size + suffix;
-                var currentElement;
             }
             else {
                 return 
@@ -71,14 +73,9 @@ function displaySearchData(data) {
                               '</div>'
             currentElement += '<div class="showInfo">'
             
-
             if(item.venue.name) {
-                currentElement += '<a class="name" href="' + item.venue.url + '" target="_blank">' +
-                                  '<h3><span>' + item.venue.name + '</span>' + '</a>'
-                if(item.venue.rating) {
-                    currentElement += '<span class="rating" style="background-color: #'+ item.venue.ratingColor +'">' + item.venue.rating + '</span>'
-                }
-                currentElement += '</h3>'
+                currentElement += '<a class="linkName" href="' + item.venue.url + '" target="_blank">' +
+                                   item.venue.name + '</a>'
             }            
             if(item.venue.hours && item.venue.hours.status) {
                 currentElement += '<p>' + item.venue.hours.status + '</p>'
@@ -87,8 +84,11 @@ function displaySearchData(data) {
                 currentElement += '<p>' + item.venue.location.formattedAddress[0] + ', ' 
                                   + item.venue.location.formattedAddress[1] + '</p>'
                 if(item.venue.contact && item.venue.contact.phone) {
-                    currentElement += ' <p class="phone">Phone: ' + item.venue.contact.phone + '</p>'
+                    currentElement += '<p class="phone"><img class="phoneImage" src="images/auricular-phone-symbol-in-a-circle.png">' + item.venue.contact.phone + '</p>'
                 }
+            }
+            if(item.venue.rating) {
+                currentElement += '<input name="input-3" value="'+ item.venue.rating/2 + '" class="rating-loading">' 
             }
             currentElement += '</div>'
             currentElement += '</div><hr>'
@@ -106,6 +106,7 @@ function displaySearchData(data) {
 
             marker.addListener('click', function() {
               infowindow.open(map, marker);
+              $('.rating-loading').rating({displayOnly: true, step: 0.5});
             });
 
             bounds.extend(marker.getPosition());                   
@@ -119,6 +120,7 @@ function displaySearchData(data) {
         resultElement += '<p>No results</p>';
     }
     $('#js-place-info').html(resultElement);
+    $('.rating-loading').rating({displayOnly: true, step: 0.5});
 }
 
 function searchSubmit() {
@@ -132,8 +134,20 @@ function searchSubmit() {
     });
 }
 
+function initPopup(ancorId, contentId) {
+    $(ancorId).popover({ 
+        html: true,
+        placement: 'bottom',
+        content: function() {
+          return $(contentId).html();
+        }
+    });
+}
+
 $(function() {
     searchSubmit();
+    initPopup('#login', "#popover-content-login");
+    initPopup('#signup', "#popover-content-signup");    
     console.log('hi')
 });
 

@@ -4,19 +4,74 @@
 }
 
 html {
-    background: url(../capstone_api/images/pink5-background.jpg) no-repeat;
-    background-size: 100% 50%;
-    /*opacity: 0.8;*/
-    /*height: 100%;*/
+    background: url(../capstone_api/images/pink5-background.jpg) no-repeat fixed;
+    background-size: cover;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
 }
 
+.landingPage {
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    right: 8%;
+    margin-top: 20px;
+    position: absolute;
+}
+
+#login, #signup {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#signup:hover, #login:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+
+li {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.input, .submit {
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 246px;
+}
+
+.submit {
+    height: 31px;
+    background-color: #D22986;
+    padding-bottom: 25px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #D22986;
+}
+
+.firstName, .lastName {
+    width: 120px;
+    display: inline-block;
+}
+
+.firstName {
+    margin-right: ;
+}
+
 .title {
     position: absolute;
-    top: 50%;
+    top: 310px;
     left: 50%;
 
     transform: translateX(-50%) translateY(-50%);
@@ -41,7 +96,6 @@ html {
     font-size: 38px;
 }
 
-
 .content {
     margin-top: 40px;
     position: absolute;
@@ -57,8 +111,9 @@ header {
 }
 
 .container {
-    background: url(../capstone_api/images/red6-background.jpg) no-repeat center center fixed;
+    background: url(../capstone_api/images/flower1-background.jpg) no-repeat center center fixed;
     background-size: cover;
+    opacity: 0.8;
     width: 100%;
     height: 400px;
     padding-top: 5%;
@@ -73,7 +128,6 @@ header {
 header > h2 {
     color: #D22986;
     font-size: 43px;
-    font-weight: bold;
     margin-bottom: 30px;
 }
 
@@ -88,7 +142,7 @@ label > p input{ /* HIDE RADIO */
 }
 
 label {
-    width: 60px;
+    width: 70px;
     height: 65px;
     cursor:pointer;
     display: inline-block;
@@ -143,9 +197,6 @@ input + img {
     border: 1px solid #DB84AF;
     border-radius: 3px;
     color: #BF0000;
-    /*-moz-box-shadow: 0 0 10px #DB84AF; 
-    -webkit-box-shadow: 0 0 10px #DB84AF; 
-    box-shadow: 0 0 3px #DB84AF;*/
 }
 
 button {
@@ -169,6 +220,7 @@ button:hover {
 
 .imageAndInfo {
     background-color: rgba(255, 255, 255, 0.7);
+    padding-left: 10%;
 }
 
 .showInfo, .containerImage {
@@ -178,17 +230,16 @@ button:hover {
 
 .containerImage {
     position: relative;
-
-    margin-left: 6%;
+   /* margin-left: 13%;*/
 }
 
-.showImage {
+.showImage {   
+    padding: 2px;
     margin-top: 20px;
     margin-bottom: 20px;
-    opacity: 1;
     display: block;
     width: 100%;
-    border: 2px solid #D22986;
+    border: 4px solid #3e2b14;
     border-radius: 1px;
     transition: .5s ease;
     backface-visibility: hidden;
@@ -212,16 +263,22 @@ button:hover {
 
 .text {
     color: white;
-    font-size: 17px;
+    font-size: 19px;
     padding: 3px;
 }
 
 .showInfo {
-    width: 50%;
+    width: 54%;
     margin-top: 25px;
-    margin-left: 5%;
+    margin-left: 4%;
     color: #DE5D83;
     font-size: 17px;
+}
+
+.phoneImage {
+    padding-bottom: 4px;
+    margin-right: 5px;
+    height: 23px;
 }
 
 hr {
@@ -235,34 +292,17 @@ hr {
 
 
 .information {
-    background: url(../capstone_api/images/red6-background.jpg) no-repeat center center fixed;
+    background: url(../capstone_api/images/flower1-background.jpg) no-repeat center center fixed;
     background-size: cover;
     width: 100%;
-    /*margin-top: 40px;*/
-    /*padding-top: 40px;*/
-
-    /*padding-top: 20px;*/
-    /*background: url(../capstone_api/images/red-background.jpg) no-repeat center center fixed;
-    background-size: cover;*/
 }
 
-.phone {
-    margin-right: 4px;
-}
-
-.name {
+.linkName {
+    display: block;
     color: #D22986;
-    font-size: 27px;
+    font-size: 25px;
     font-weight: bold;
-}
-
-.rating {
-    color: white;
-    font-size: 15px;
-    padding: 5px;
-    margin-left: 15px;
-    border-radius: 7px;
-    float: right;
+    margin-bottom: 8px;
 }
 
 #searchIcon {
@@ -272,9 +312,7 @@ hr {
 }
 
 #map {
-   /* background: url(../capstone_api/images/pink3-background.png) no-repeat center center fixed;
-    background-size: cover;*/
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     height: 540px;
     width: 100%;
 }
@@ -285,12 +323,18 @@ hr {
         height: 80%;
         background-size: 500px;
     }
+    #login, #signup {
+        font-size: 12px;
+        margin-left: -20px;
+    }
     .title {
-        top: 17%;
+        top: 120px;
+        width: 100%;
     }
     .container {
         width: 100%;
-        height: 260px;
+        height: 250px;
+        opacity: 1;
     }
     .content {
         top: 30%;
@@ -330,16 +374,19 @@ hr {
         width: 100%;
         height: 250px;
     }
+
     .showImage {
-        width: 150px;
+        width: 170px;
         height: 150px;
-        margin-top: 3px;
+        margin-left: 9px;
+        margin-top: 12px;
     }
     .showInfo {
         width: 90%;
         font-size: 12px;
-        margin-left: 6%;
-        margin-top: -20px;
+        margin-left: 3%;
+        margin-top: 3px;
+        /*margin-bottom: 3px;*/
     }
     .information {
         width: 100%;
@@ -348,7 +395,7 @@ hr {
         width: 35px;
         height: 35px;
     }
-    .name {
+    .linkName {
         font-size: 17px;
     }
     .rating {
