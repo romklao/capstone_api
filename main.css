@@ -236,12 +236,12 @@ button:hover {
     color: #E91E63;
     font-size: 15px;
     font-weight: normal;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 12px 0px 12px;
 }
 
 .showInfo {
     width: 54%;
-    margin-top: 25px;
+    margin-top: 31px;
     margin-left: 4%;
     color: #757575;
     font-size: 17px;
