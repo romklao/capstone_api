@@ -74,7 +74,7 @@ header {
 
 header > h2 {
     color: #C2185B;
-    font-size: 43px;
+    font-size: 40px;
     margin-bottom: 30px;
 }
 
@@ -262,7 +262,7 @@ hr {
 #linkName {
     text-decoration: none;
     color: #C2185B;
-    font-size: 23px;
+    font-size: 21px;
     font-weight: bold;
     margin-bottom: 8px;
 }
@@ -362,8 +362,8 @@ hr {
         width: 35px;
         height: 35px;
     }
-    .linkName {
-        font-size: 15px;
+    #linkName {
+        font-size: 17px;
     }
     .rating {
         font-size: 13px;
