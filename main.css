@@ -242,7 +242,7 @@ button:hover {
     color: white;
     font-size: 15px;
     font-weight: normal;
-    padding: 0px 15px 0px 15px;
+    padding: 1px 15px 1px 15px;
 }
 
 .showInfo {
@@ -350,12 +350,15 @@ hr {
         height: 250px;
         margin-top: -250px;
     }
-
     .showImage {
         width: 170px;
         height: 150px;
         margin-left: 9px;
         margin-top: 12px;
+    }
+    .middle {
+        left: 20%;
+        top: 41%;
     }
     .showInfo {
         width: 90%;
@@ -399,6 +402,9 @@ hr {
     }
     label {
         width: 90px;
+    }
+    .middle {
+        left: 23%;
     }
 }
 
