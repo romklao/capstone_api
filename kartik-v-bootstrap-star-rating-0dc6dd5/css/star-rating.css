@@ -54,18 +54,20 @@
 }
 
 .rating-container .empty-stars {
-    color: #74C2E1;
+    color: #C2185B;
+    cursor: initial;
 }
 
 .rating-container .filled-stars {
     position: absolute;
+    cursor: initial;
     left: 0;
     top: 0;
     margin: auto;
-    color: #009ECE;
+    color: #FF5252;
     white-space: nowrap;
     overflow: hidden;
-    -webkit-text-stroke: 1px #009ECE;
+    -webkit-text-stroke: 1px #C2185B;
     text-shadow: 1px 1px #999;
 }
 

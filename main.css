@@ -18,7 +18,7 @@ html {
 
 ul {
     list-style-type: none;
-    right: 8%;
+    right: 10%;
     margin-top: 25px;
     position: absolute;
 }
@@ -37,8 +37,8 @@ ul {
 
 
 li {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
     display: inline-block;
     vertical-align: top;
 }
@@ -58,6 +58,10 @@ li {
     color: white;
     font-weight: bold;
     border: 1px solid #D22986;
+}
+
+.inputName {
+    margin-bottom: -10px;
 }
 
 .firstName, .lastName {
@@ -115,7 +119,7 @@ header {
     background-size: cover;
     opacity: 0.8;
     width: 100%;
-    height: 400px;
+    height: 450px;
     padding-top: 5%;
     padding-left: 0;
     padding-right: 0;
@@ -126,13 +130,12 @@ header {
 }
 
 header > h2 {
-    color: #D22986;
+    color: #C2185B;
     font-size: 43px;
     margin-bottom: 30px;
 }
 
 header > h2:hover {
-    color: #D22986;
     transform: scale(1.04);
 }
 
@@ -160,7 +163,7 @@ label:hover, label:focus {
 }
 
 label > p {
-    color: #D22986;
+    color: #E91E63;
     font-size: 13px;
 }
 
@@ -193,10 +196,27 @@ input + img {
     padding-bottom: 6px;
 }
 
+#js-input:-webkit-autofill,
+#js-input:-webkit-autofill:hover,
+#js-input:-webkit-autofill:focus,
+#js-input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    border-color: #D22986;
+}
+
 #js-input:hover {
     border: 1px solid #DB84AF;
     border-radius: 3px;
+    transform: scale(1.007);
+    -moz-box-shadow: 0 0 10px #DB84AF; 
+    -webkit-box-shadow: 0 0 10px #DB84AF; 
+    box-shadow: 0 0 10px #DB84AF;
     color: #BF0000;
+}
+
+#js-input:focus, button:focus { 
+    outline: none;
+    border-color: #719ECE;
 }
 
 button {
@@ -271,14 +291,14 @@ button:hover {
     width: 54%;
     margin-top: 25px;
     margin-left: 4%;
-    color: #DE5D83;
+    color: #757575;
     font-size: 17px;
 }
 
-.phoneImage {
-    padding-bottom: 4px;
+.material-icons {
     margin-right: 5px;
-    height: 23px;
+    font-size: 18px;
+    color: #E91E63;
 }
 
 hr {
@@ -292,22 +312,26 @@ hr {
 
 
 .information {
-    background: url(../capstone_api/images/flower1-background.jpg) no-repeat center center fixed;
-    background-size: cover;
+    display: none;
     width: 100%;
 }
 
-.linkName {
-    display: block;
-    color: #D22986;
+#linkName {
+    text-decoration: none;
+    color: #C2185B;
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 8px;
 }
 
+#linkName:hover {
+   border-bottom: 2px solid #C2185B; 
+}
+
 #searchIcon {
     height: 30px;
     padding: 4px 6px 7px 3px;
+    color: #C2185B;
     
 }
 
@@ -357,11 +381,11 @@ hr {
         width: 18px;
     }
     label {
-        width: 45px;
+        width: 60px;
 
     }
     label > p {
-        font-size: 7px;
+        font-size: 11px;
     }
     #js-input {
         font-size: 13px;

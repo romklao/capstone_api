@@ -15,7 +15,6 @@ function getDataFromApi(location, category, callback) {
             query: 'romantic',
             section: category,
             venuePhotos: '1',
-            // limit: '10',
             radius: '10000',
             v: version,
             client_id: client_id,
@@ -74,8 +73,8 @@ function displaySearchData(data) {
             currentElement += '<div class="showInfo">'
             
             if(item.venue.name) {
-                currentElement += '<a class="linkName" href="' + item.venue.url + '" target="_blank">' +
-                                   item.venue.name + '</a>'
+                currentElement += '<p class="name"><a id="linkName" href="' + item.venue.url + '" target="_blank">' +
+                                   item.venue.name + '</a></p>'
             }            
             if(item.venue.hours && item.venue.hours.status) {
                 currentElement += '<p>' + item.venue.hours.status + '</p>'
@@ -84,7 +83,7 @@ function displaySearchData(data) {
                 currentElement += '<p>' + item.venue.location.formattedAddress[0] + ', ' 
                                   + item.venue.location.formattedAddress[1] + '</p>'
                 if(item.venue.contact && item.venue.contact.phone) {
-                    currentElement += '<p class="phone"><img class="phoneImage" src="images/auricular-phone-symbol-in-a-circle.png">' + item.venue.contact.phone + '</p>'
+                    currentElement += '<p><i class="material-icons">phone</i>' + item.venue.contact.phone + '</p>'
                 }
             }
             if(item.venue.rating) {
@@ -126,6 +125,7 @@ function displaySearchData(data) {
 function searchSubmit() {
     $('#js-search-form').submit(function(event) {
         event.preventDefault();
+        $('.information').show();
         var searchLocation = $(this).find('#js-input').val();
         var category = $('form input[type=radio]:checked').val();
         console.log('category', category);
@@ -134,20 +134,8 @@ function searchSubmit() {
     });
 }
 
-function initPopup(ancorId, contentId) {
-    $(ancorId).popover({ 
-        html: true,
-        placement: 'bottom',
-        content: function() {
-          return $(contentId).html();
-        }
-    });
-}
-
 $(function() {
     searchSubmit();
-    initPopup('#login', "#popover-content-login");
-    initPopup('#signup', "#popover-content-signup");    
     console.log('hi')
 });
 
