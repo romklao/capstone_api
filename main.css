@@ -58,9 +58,8 @@ header {
 }
 
 .search-container {
-    background: url(../capstone_api/images/flower1-background.jpg) no-repeat center center fixed;
+    background: url(../capstone_api/images/flower3-background.jpg) no-repeat center center fixed;
     background-size: cover;
-    opacity: 0.8;
     width: 100%;
     height: 650px;
     padding-top: 5%;
@@ -127,6 +126,12 @@ input + img {
     width: 35px;
 }
 
+#js-input, button {
+    -webkit-box-shadow: 0 9px 6px -6px #DB84AF;
+       -moz-box-shadow: 0 10px 6px -6px #DB84AF;
+            box-shadow: 0 7px 6px -6px #DB84AF;
+}
+
 #js-input {
     width: 55%;
     height: 45px;
@@ -135,7 +140,7 @@ input + img {
     border: 1px solid #D22986;
     border-radius: 3px 0px 0px 3px;
     border-right: none;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 30px;
     padding-left: 5px;
     padding-top: 2px;
@@ -163,7 +168,8 @@ input + img {
 
 #js-input:focus, button:focus { 
     outline: none;
-    border-color: #719ECE;
+    border-color: #C2185B;
+    background-color: white;
 }
 
 button {
