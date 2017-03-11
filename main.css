@@ -57,12 +57,12 @@ header {
     margin-bottom: 30px;
 }
 
-.container {
+.search-container {
     background: url(../capstone_api/images/flower1-background.jpg) no-repeat center center fixed;
     background-size: cover;
     opacity: 0.8;
     width: 100%;
-    height: 450px;
+    height: 650px;
     padding-top: 5%;
     padding-left: 0;
     padding-right: 0;
@@ -193,7 +193,6 @@ button:hover {
 
 .containerImage {
     position: relative;
-   /* margin-left: 13%;*/
 }
 
 .showImage {   
@@ -280,36 +279,32 @@ hr {
 
 #map {
     margin-bottom: 30px;
+    margin-top: -230px;
     height: 540px;
     width: 100%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
 
     html {
-        height: 80%;
-        background-size: 500px;
-    }
-    #login, #signup {
-        font-size: 12px;
-        margin-left: -18px;
+        width: 100%;
+        background-size: 100%;
     }
     .title {
-        top: 120px;
+        top: 100px;
         width: 100%;
     }
-    .container {
+    .search-container {
         width: 100%;
-        height: 250px;
+        height: 500px;
         opacity: 1;
     }
     .content {
-        top: 30%;
-
+        top: 25%;
     }
     .information {
         background-size: cover;
-        height: 80%
+        height: 80%;
     }
     .title h1 {
         font-size: 20px;
@@ -353,7 +348,6 @@ hr {
         font-size: 14px;
         margin-left: 3%;
         margin-top: 3px;
-        /*margin-bottom: 3px;*/
     }
     .information {
         width: 100%;
