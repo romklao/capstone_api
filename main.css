@@ -79,8 +79,8 @@ header > h2 {
 }
 
 header > h2:hover {
-    transition: 1s ease;
-    transform: scale(1.04);
+    transition: 0.5s ease;
+    transform: scale(1.05);
 }
 
 label > p input{ /* HIDE RADIO */
@@ -273,7 +273,7 @@ hr {
 }
 
 #linkName:hover {
-   border-bottom: 2px solid #C2185B; 
+    border-bottom: 2px solid #C2185B; 
 }
 
 #searchIcon {
