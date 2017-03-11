@@ -163,7 +163,7 @@ input + img {
 }
 
 button {
-    width: 45px;
+    width: 50px;
     height: 45px;
     background-color: white;
     border: 1px solid #D22986;
@@ -363,7 +363,7 @@ hr {
     }
 }
 
-@media (min-width: 750px) {
+@media (min-width: 750px) and (max-width: 800px) {
     html {
         background-size: 100%; 
     }
@@ -386,9 +386,13 @@ hr {
     }
 }
 
-@media (min-width: 1000px) and (max-width: 1400px) {
+@media (min-width: 1000px) and (max-width: 1050px) {
+    html {
+        background-size: 100%; 
+    }
     .title {
         top: 270px;
+        width: 100%;
     }
     .search-container {
         margin-top: -795px;
