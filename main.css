@@ -131,7 +131,7 @@ input + img {
     width: 55%;
     height: 45px;
     color: #D22986;
-    font-size: 15px;
+    font-size: 17px;
     border: 1px solid #D22986;
     border-radius: 3px 0px 0px 3px;
     border-right: none;
@@ -153,6 +153,7 @@ input + img {
 #js-input:hover {
     border: 1px solid #DB84AF;
     border-radius: 3px;
+    transition: .5s ease;
     transform: scale(1.007);
     -moz-box-shadow: 0 0 10px #DB84AF; 
     -webkit-box-shadow: 0 0 10px #DB84AF; 
@@ -179,6 +180,7 @@ button:hover {
     border: 1px solid #DB84AF;
     border-radius: 3px;
     transform: scale(1.03);
+    transition: .5s ease;
     -moz-box-shadow: 0 0 10px #DB84AF; 
     -webkit-box-shadow: 0 0 10px #DB84AF; 
     box-shadow: 0 0 5px #DB84AF;
