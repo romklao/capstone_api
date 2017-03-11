@@ -16,63 +16,6 @@ html {
     position: relative;
 }
 
-ul {
-    list-style-type: none;
-    right: 10%;
-    margin-top: 25px;
-    position: absolute;
-}
-
-#login, #signup {
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 5px;
-}
-
-#signup:hover, #login:hover {
-    border-bottom: 2px solid rgb(255, 255, 255);
-}
-
-
-li {
-    margin-left: 12px;
-    margin-right: 12px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.input, .submit {
-    border-radius: 3px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 30px;
-    width: 246px;
-}
-
-.submit {
-    height: 31px;
-    background-color: #D22986;
-    padding-bottom: 25px;
-    color: white;
-    font-weight: bold;
-    border: 1px solid #D22986;
-}
-
-.inputName {
-    margin-bottom: -10px;
-}
-
-.firstName, .lastName {
-    width: 120px;
-    display: inline-block;
-}
-
-.firstName {
-    margin-right: ;
-}
-
 .title {
     position: absolute;
     top: 310px;
@@ -407,7 +350,7 @@ hr {
     }
     .showInfo {
         width: 90%;
-        font-size: 12px;
+        font-size: 14px;
         margin-left: 3%;
         margin-top: 3px;
         /*margin-bottom: 3px;*/
@@ -420,7 +363,7 @@ hr {
         height: 35px;
     }
     .linkName {
-        font-size: 17px;
+        font-size: 15px;
     }
     .rating {
         font-size: 13px;
