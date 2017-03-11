@@ -79,6 +79,7 @@ header > h2 {
 }
 
 header > h2:hover {
+    transition: 1s ease;
     transform: scale(1.04);
 }
 
@@ -102,6 +103,7 @@ label:before {
 }
 
 label:hover, label:focus {
+    transition: .5s ease;
     transform: scale(1.1);
 }
 
@@ -112,6 +114,7 @@ label > p {
 
 label > p:hover {
     color: #D22986;
+    transition: .5s ease;
     text-decoration: underline;
 }
 
@@ -217,6 +220,7 @@ button:hover {
 
 .containerImage:hover .showImage {
     opacity: 1;
+    transform: scale(1.08);
 }
 
 .containerImage:hover .middle {
