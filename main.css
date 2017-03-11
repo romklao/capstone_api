@@ -155,7 +155,7 @@ input + img {
     border: 1px solid #DB84AF;
     border-radius: 3px;
     transition: .5s ease;
-    transform: scale(1.007);
+    transform: scale(1.01);
     -moz-box-shadow: 0 0 10px #DB84AF; 
     -webkit-box-shadow: 0 0 10px #DB84AF; 
     box-shadow: 0 0 10px #DB84AF;
