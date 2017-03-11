@@ -141,7 +141,6 @@ input + img {
     border-radius: 3px 0px 0px 3px;
     border-right: none;
     margin-top: 25px;
-    margin-bottom: 30px;
     padding-left: 5px;
     padding-top: 2px;
     padding-bottom: 6px;
@@ -292,7 +291,7 @@ hr {
 
 #map {
     margin-bottom: 30px;
-    margin-top: -230px;
+    margin-top: -250px;
     height: 540px;
     width: 100%;
 }
