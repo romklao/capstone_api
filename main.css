@@ -193,7 +193,7 @@ button:hover {
 }
 
 .imageAndInfo {
-    background-color: rgba(255, 255, 255, 0.7);
+    /*background-color: rgba(255, 255, 255, 0.7);*/
     padding-left: 10%;
 }
 
@@ -263,9 +263,8 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #FFC0CB;
-    margin: 1em 0;
-    padding: 0; 
+    border-top: 1px solid #F8BBD0;
+    margin: 1em 0; 
 }
 
 
