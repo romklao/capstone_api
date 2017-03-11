@@ -123,24 +123,25 @@ input + img {
     width: 35px;
 }
 
-#js-input, button {
-    -webkit-box-shadow: 0 9px 6px -6px #DB84AF;
-       -moz-box-shadow: 0 10px 6px -6px #DB84AF;
-            box-shadow: 0 7px 6px -6px #DB84AF;
+#js-search-box {
+    display: inline-block;
+    width: 55%;
+    height: 50px;
+    border: 1px solid #D22986;
+    border-radius: 3px;
+    margin-top: 28px;
+    padding: 10px 0 10px 0;
+
+    -webkit-box-shadow: 0 9px 6px -6px #DB84AF,;
+       -moz-box-shadow: 0 9px 6px -6px #DB84AF;
+            box-shadow: 0 8px 6px -6px #DB84AF;
 }
 
 #js-input {
-    width: 55%;
-    height: 45px;
+    width: 90%;
     color: #D22986;
     font-size: 17px;
-    border: 1px solid #D22986;
-    border-radius: 3px 0px 0px 3px;
-    border-right: none;
-    margin-top: 25px;
-    padding-left: 5px;
-    padding-top: 2px;
-    padding-bottom: 6px;
+    border: none;
 }
 
 #js-input:-webkit-autofill,
@@ -148,12 +149,10 @@ input + img {
 #js-input:-webkit-autofill:focus,
 #js-input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
-    border-color: #D22986;
 }
 
-#js-input:hover {
+#js-search-box:hover {
     border: 1px solid #DB84AF;
-    border-radius: 3px;
     transition: .5s ease;
     transform: scale(1.01);
     -moz-box-shadow: 0 0 10px #DB84AF; 
@@ -164,28 +163,26 @@ input + img {
 
 #js-input:focus, button:focus { 
     outline: none;
-    border-color: #C2185B;
+    border-color: none;
     background-color: white;
+}
+.spanButton {
+    margin-left: 18px;
+}
+
+#searchIcon {
+    width: 22px;
 }
 
 button {
-    width: 50px;
-    height: 45px;
     background-color: white;
-    border: 1px solid #D22986;
-    border-left: #E9EBEE;
-    border-radius: 0px 3px 3px 0px;
-    padding-right: 2px;
+    border:none;
+    padding: 0;
 }
 
-button:hover {
-    border: 1px solid #DB84AF;
-    border-radius: 3px;
-    transform: scale(1.03);
+#searchIcon:hover {
+    transform: scale(1.1);
     transition: .5s ease;
-    -moz-box-shadow: 0 0 10px #DB84AF; 
-    -webkit-box-shadow: 0 0 10px #DB84AF; 
-    box-shadow: 0 0 5px #DB84AF;
 }
 
 .imageAndInfo {
@@ -263,7 +260,6 @@ hr {
     margin: 1em 0; 
 }
 
-
 .information {
     display: none;
     width: 100%;
@@ -279,11 +275,6 @@ hr {
 
 #linkName:hover {
     border-bottom: 2px solid #C2185B; 
-}
-
-#searchIcon {
-    height: 30px;
-    padding: 4px 6px 7px 3px;
 }
 
 #map {
@@ -333,12 +324,21 @@ hr {
     label > p {
         font-size: 11px;
     }
+    #js-search-box {
+        width: 88%;
+        height: 40px;
+        margin-top: 13px;
+        padding-top: 1px;
+    }
     #js-input {
-        font-size: 13px;
-        width: 65%;
-        height: 35px;
-        margin-top: 5px;
-        padding-top: 6px;
+        font-size: 12px;
+        width: 85%;
+    }
+    .spanButton {
+        margin-left: 0px;
+    }
+    #searchIcon {
+        width: 18px;
     }
     #map {
         width: 100%;
@@ -389,6 +389,10 @@ hr {
         margin-top: -610px;
         height: 600px;
     }
+    #js-search-box {
+        padding-left: 4px;
+        padding-right: 8px;
+    }
     #js-input {
         font-size: 18px;
     }
@@ -422,9 +426,18 @@ hr {
         width: 110px;
     }
     #js-input {
-        margin-top: 40px;
-        height: 57px;
+        width: 85%;
         font-size: 20px;
+    }
+    #js-search-box {
+        width: 60%;
+        height: 65px;
+        margin-top: 40px;
+        padding-top: 3px;
+    }
+    #searchIcon {
+        width: 33px;
+        padding-bottom: 5px;
     }
     button {
         width: 57px;
