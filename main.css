@@ -85,7 +85,7 @@ label > p input{ /* HIDE RADIO */
 }
 
 label {
-    width: 70px;
+    width: 80px;
     height: 65px;
     cursor:pointer;
     display: inline-block;
@@ -327,11 +327,12 @@ hr {
         padding-top: 1px;
     }
     #js-input {
-        font-size: 12px;
-        width: 85%;
+        font-size: 13px;
+        width: 81%;
     }
     #searchIcon {
         width: 18px;
+        padding-bottom: 3px;
     }
     #map {
         width: 100%;
@@ -354,11 +355,11 @@ hr {
         top: 41%;
     }
     .showInfo {
-        width: 90%;
+        width: 100%;
         font-size: 14px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 40px;
+        margin-left: 0;
+        margin-bottom: 12px;
+        margin-top: 45px;
     }
     .information {
         width: 100%;
