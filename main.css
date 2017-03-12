@@ -387,7 +387,7 @@ hr {
     }
 }
 
-@media (min-width: 720px) and (max-width: 800px) {
+@media (min-width: 720px) and (max-width: 900px) {
     html {
         background-size: 100%; 
     }
@@ -400,11 +400,11 @@ hr {
         height: 600px;
     }
     #js-search-box {
-        width: 70%;
-        padding-left: 4px;
-        padding-right: 8px;
+        width: 85%;
+        padding-left: 0;
     }
     #js-input {
+        width: 50%
         font-size: 18px;
     }
     label > p {
