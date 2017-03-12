@@ -77,12 +77,14 @@ function displaySearchData(data) {
                                    item.venue.name + '</a></p>'
             }
             if(item.venue.price && item.venue.price.tier) {
+                currentElement += '<span class="priceToolTip" data-toggle="tooltip" data-placement="bottom" title="' + item.venue.price.message + '">'
+
                     var tier = item.venue.price.tier
                     for(var i = 0; i < tier; i++) {
                         currentElement += '<span class="glyphicon glyphicon-usd"></span>'
--->
                     }
                     currentElement += ' &bull; '
+                currentElement += '</span>'
             }            
             if(item.venue.hours && item.venue.hours.status) {
                 currentElement += '<span>' + item.venue.hours.status + '</span>'
@@ -129,6 +131,7 @@ function displaySearchData(data) {
     }
     $('#js-place-info').html(resultElement);
     $('.rating-loading').rating({displayOnly: true, step: 0.5});
+    $('.priceToolTip').tooltip();
 }
 
 function searchSubmit() {
