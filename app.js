@@ -75,9 +75,18 @@ function displaySearchData(data) {
             if(item.venue.name) {
                 currentElement += '<p class="name"><a id="linkName" href="' + item.venue.url + '" target="_blank">' +
                                    item.venue.name + '</a></p>'
+            }
+            if(item.venue.price && item.venue.price.tier) {
+                    var tier = item.venue.price.tier
+                    for(var i = 0; i < tier; i++) {
+                        currentElement += '<span class="glyphicon glyphicon-usd"></span>'
+-->
+                    }
+                    currentElement += ' &bull; '
             }            
             if(item.venue.hours && item.venue.hours.status) {
-                currentElement += '<p>' + item.venue.hours.status + '</p>'
+                currentElement += '<span>' + item.venue.hours.status + '</span>'
+
             }
             if(item.venue.location && item.venue.location.formattedAddress) {
                 currentElement += '<p>' + item.venue.location.formattedAddress[0] + ', ' 

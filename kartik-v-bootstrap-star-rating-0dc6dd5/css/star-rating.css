@@ -54,7 +54,7 @@
 }
 
 .rating-container .empty-stars {
-    color: #C2185B;
+    color: #E91E63;
     cursor: initial;
 }
 
@@ -67,7 +67,7 @@
     color: #FF5252;
     white-space: nowrap;
     overflow: hidden;
-    -webkit-text-stroke: 1px #C2185B;
+    -webkit-text-stroke: 1px #E91E63;
     text-shadow: 1px 1px #999;
 }
 

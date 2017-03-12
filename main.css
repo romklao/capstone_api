@@ -172,12 +172,12 @@ input + img {
 
 #searchIcon {
     width: 22px;
+    padding-bottom: 5px;
 }
 
 button {
     background-color: white;
     border:none;
-    padding: 0;
 }
 
 #searchIcon:hover {
@@ -244,6 +244,12 @@ button {
     margin-left: 4%;
     color: #757575;
     font-size: 17px;
+}
+
+.glyphicon-usd {
+    font-size: 13px;
+    margin-left: -3px;
+    color: #FF5252;
 }
 
 .material-icons {
@@ -347,12 +353,10 @@ hr {
         height: 150px;
         margin-left: auto;
         margin-right: auto;
-        /*margin-left: 9px;*/
-        /*margin-top: 12px;*/
     }
     .middle {
-        left: 20%;
-        top: 41%;
+        left: 15%;
+        top: 55%;
     }
     .showInfo {
         width: 100%;
@@ -376,7 +380,7 @@ hr {
         padding: 3px;
     }
     .rating-md {
-        font-size: 19px;
+        font-size: 20px;
     }
 }
 
