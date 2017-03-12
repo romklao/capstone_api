@@ -291,7 +291,7 @@ hr {
         background-size: 100%;
     }
     .title {
-        top: 100px;
+        top: 97px;
         width: 100%;
     }
     .search-container {
@@ -302,10 +302,6 @@ hr {
     .content {
         top: 25%;
     }
-    .information {
-        background-size: cover;
-        height: 80%;
-    }
     .title h1 {
         font-size: 20px;
     }
@@ -313,13 +309,13 @@ hr {
         font-size: 17px;
     }
     header > h2 {
-        font-size: 18px;
+        font-size: 19px;
     }
     input + img {
-        width: 18px;
+        width: 23px;
     }
     label {
-        width: 60px;
+        width: 75px;
     }
     label > p {
         font-size: 11px;
