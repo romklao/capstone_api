@@ -79,7 +79,7 @@ function displaySearchData(data) {
             if(item.venue.price && item.venue.price.tier) {
                 currentElement += '<span class="priceToolTip" data-toggle="tooltip" data-placement="bottom" title="' + item.venue.price.message + '">'
 
-                    var tier = item.venue.price.tier
+                var tier = item.venue.price.tier
                     for(var i = 0; i < tier; i++) {
                         currentElement += '<span class="glyphicon glyphicon-usd"></span>'
                     }
