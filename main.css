@@ -174,7 +174,7 @@ input + img {
 
 #searchIcon {
     width: 18px;
-    padding: 0;
+    padding-bottom: 3px;
 }
 
 button {
