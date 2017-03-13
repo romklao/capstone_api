@@ -174,7 +174,6 @@ input + img {
 
 #searchIcon {
     width: 18px;
-    padding-bottom: 3px;
 }
 
 button {
@@ -343,6 +342,7 @@ hr {
     }
     #searchIcon {
         width: 15px;
+        padding-bottom: 5px;
     }
     .imageAndInfo {
         padding-left: 5%;
