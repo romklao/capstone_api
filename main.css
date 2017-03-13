@@ -135,6 +135,8 @@ input + img {
 }
 
 #js-input {
+    background: url(../capstone_api/images/flower3-background.jpg) no-repeat center center fixed;
+    background-size: cover;
     position: absolute;
     left: 1%;
     width: 70%;
@@ -171,7 +173,7 @@ input + img {
 }
 
 #searchIcon {
-    width: 22px;
+    width: 19px;
     padding-bottom: 5px;
 }
 
@@ -340,7 +342,7 @@ hr {
         width: 80%;
     }
     #searchIcon {
-        width: 17px;
+        width: 15px;
     }
     .imageAndInfo {
         padding-left: 5%;
@@ -361,6 +363,9 @@ hr {
         margin-left: 0;
         margin-bottom: 12px;
         margin-top: 45px;
+    }
+    .glyphicon-usd {
+        font-size: 10px;
     }
     #map {
         width: 100%;
@@ -415,7 +420,7 @@ hr {
         font-size: 20px;
     }
     #searchIcon {
-        width: 22px;
+        width: 19px;
     }
     .imageAndInfo {
         padding-left: 6%;
@@ -424,7 +429,7 @@ hr {
         left: 23%;
     }
     .glyphicon-usd {
-        font-size: 12px;
+        font-size: 11px;
     }
     #map {
         height: 400px;
