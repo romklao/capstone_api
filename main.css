@@ -12,13 +12,9 @@ html {
     -o-background-size: cover;
 }
 
-.landingPage {
-    position: relative;
-}
-
 .title {
     position: absolute;
-    top: 330px;
+    top: 50%;
     left: 50%;
 
     transform: translateX(-50%) translateY(-50%);
@@ -124,6 +120,7 @@ input + img {
 }
 
 #js-search-box {
+    position: relative;
     display: inline-block;
     width: 55%;
     height: 50px;
@@ -138,7 +135,9 @@ input + img {
 }
 
 #js-input {
-    width: 90%;
+    position: absolute;
+    left: 1%;
+    width: 70%;
     color: #D22986;
     font-size: 17px;
     border: none;
@@ -164,10 +163,10 @@ input + img {
 #js-input:focus, button:focus { 
     outline: none;
     border-color: none;
-    background-color: white;
 }
 .spanButton {
-    width: 10%;
+    position: absolute;
+    right: 1.5%;
     margin-left: 18px;
 }
 
@@ -292,14 +291,14 @@ hr {
     width: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
 
     html {
         width: 100%;
     }
     .title {
         width: 100%;
-        top: 140px;
+        top: 19%;
     }
     .title h1 {
         font-size: 20px;
@@ -308,12 +307,11 @@ hr {
     .title h2 {
         font-size: 17px;
         margin: 10px 0 10px 0;
-        padding-bottom: 50px;
     }
     .content {
         width: 100%;
         height: 100%;
-        top: 30%
+        top: 30%;
     }
     header > h2 {
         font-size: 19px;
@@ -332,23 +330,17 @@ hr {
         height: 260px;
     }
     #js-search-box {
-        display: inline-block;
-        width: 90%;
+        width: 75%;
         height: 38px;
         margin-top: 11px;
-        padding-top: 4px;
+        padding: 8px 0 9px 0;
     }
     #js-input {
         font-size: 12px;
         width: 80%;
     }
-    .spanButton {
-        width: 20%;
-        margin-left: 25px;
-    }
     #searchIcon {
         width: 17px;
-        padding-top: 2px;
     }
     .imageAndInfo {
         padding-left: 5%;
@@ -380,22 +372,22 @@ hr {
 
 }
 
-@media (min-width: 750px) and (max-width: 1025px) {
+@media (min-width: 760px) and (max-width: 1100px) {
     html {
         width: 100%;
     }
     .content {
-        top: 40%;
+        top: 35%;
     }
     .title {
         width: 100%;
-        top: 250px;
+        top: 18%;
     }
     .title h1 {
-        font-size: 35px;
+        font-size: 38px;
     }
     .title h2 {
-        font-size: 30px;
+        font-size: 32px;
     }
     header > h2 {
         font-size: 25px;
@@ -404,7 +396,7 @@ hr {
         font-size: 16px;
     }
     label {
-        width: 100px;
+        width: 120px;
     }
     input + img {
         width: 27px;
@@ -416,22 +408,17 @@ hr {
         width: 80%;
         height: 50px;
         margin-top: 20px;
-        padding-top: 10px;
     }
     #js-input {
-        display: inline-block;
-        width: 90%
+        position: absolute;
+        width: 70%
         font-size: 20px;
-    }
-    .spanButton {
-        width: 30%;
-        margin-left: 40px;
     }
     #searchIcon {
         width: 22px;
     }
     .imageAndInfo {
-        padding-left: 10%;
+        padding-left: 6%;
     }
     .middle {
         left: 23%;
