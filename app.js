@@ -138,6 +138,7 @@ function searchSubmit() {
     $('#js-search-form').submit(function(event) {
         event.preventDefault();
         $('.information').show();
+        // $('.information').addClass('mapAndInfo');
         var searchLocation = $(this).find('#js-input').val();
         var category = $('form input[type=radio]:checked').val();
         console.log('category', category);
