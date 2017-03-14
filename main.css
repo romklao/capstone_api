@@ -102,6 +102,7 @@ label:hover, label:focus {
 label > p {
     color: #E91E63;
     font-size: 13px;
+    font-weight: normal;
 }
 
 label > p:hover {
