@@ -112,7 +112,7 @@ label > p:hover {
 }
 
 label > p > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
-    content: url('images/1487853173_heart.png');
+    content: url('images/couple.png');
     border-radius: 2px;
 }
 
