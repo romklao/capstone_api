@@ -117,6 +117,7 @@ function displaySearchData(data) {
             marker.addListener('click', function() {
               infowindow.open(map, marker);
               $('.rating-loading').rating({displayOnly: true, step: 0.5});
+              $('.priceToolTip').tooltip();
             });
 
             bounds.extend(marker.getPosition());                   
