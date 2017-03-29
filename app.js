@@ -1,4 +1,6 @@
 
+'use strict'
+
 var FOURSQUARE_BASE_URL = 'https://api.foursquare.com/v2/venues/explore';
 var version = '20170101';
 var client_id = 'MY3IL31RJIXONBRRWUZ4W444CAXYRBL2WDJTA4X2RV3WLJBW';
@@ -101,7 +103,7 @@ function displaySearchData(data) {
                 currentElement += '<input name="input-3" value="'+ item.venue.rating/2 + '" class="rating-loading">' 
             }
             currentElement += '</div>'
-            currentElement += '</div><hr>'
+            currentElement += '</div>'
             resultElement += currentElement
 
             var myLatLng = {lat: item.venue.location.lat, lng: item.venue.location.lng};
@@ -139,7 +141,6 @@ function searchSubmit() {
     $('#js-search-form').submit(function(event) {
         event.preventDefault();
         $('.information').show();
-        // $('.information').addClass('mapAndInfo');
         var searchLocation = $(this).find('#js-input').val();
         var category = $('form input[type=radio]:checked').val();
         console.log('category', category);
