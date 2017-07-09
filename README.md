@@ -1,8 +1,22 @@
-# Romatic Places App 
+# Romantic Places
+ 
+Live Demo : https://romklao.github.io/capstone_api/
 
-This project is for finding romantic places.
-We use javascript to manage the app and we retrive data from Foursquare API to show the places.
+# Introduction
 
-Following is the link for the project.
+Romantic Places app is an application that helps users to find a place for a couple to spend good time together. Retrieving data from Foursquare API.
 
-* [Romantic Places App](https://romklao.github.io/capstone_api/)
+# QuickStart
+
+1. Search a place by entering a city. 
+2. Select a category.
+
+# Technologies Utilized
+
+## Front End
+
+- HTML 5
+- CSS3
+- Jquery
+- Javascript
+
