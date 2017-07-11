@@ -3,9 +3,12 @@
     margin: 0 auto;
 }
 
-html {
-    background: url(../capstone_api/images/pink5-background.jpg) no-repeat fixed;
+#landingPage {
+    background: url(images/pink5-background.jpg) fixed no-repeat;
     background-size: cover;
+    height: 705px;
+    margin: 0;
+    width: 100%;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -13,7 +16,7 @@ html {
 }
 
 .title {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
 
@@ -40,14 +43,22 @@ html {
 }
 
 .content {
-    background: url(../capstone_api/images/flower3-background.jpg) no-repeat center center fixed;
+    background: url(images/flower3-background.jpg) fixed no-repeat;
     background-size: cover;
-    height: 100%;
-    margin-top: 40px;
-    position: absolute;
+    position: relative;
+    padding-top: 100px;
     top: 100%;
     left: 0;
     width: 100%;
+}
+
+.mapWrap {
+    visibility: hidden;
+}
+
+.mapWrapShown {
+    visibility: visible;
+    margin-top: 100px;
 }
 
 header {
@@ -57,11 +68,10 @@ header {
 
 .search-container {
     width: 100%;
-    height: 55%;
-    padding-top: 3.5%;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
+    margin: 0;
 }
 
 header > h2 {
@@ -177,7 +187,7 @@ input + img {
     width: 18px;
 }
 
-button {
+.buttonSearch {
     background: url(../capstone_api/images/flower3-background.jpg) no-repeat center center fixed;
     background-size: cover;
     border:none;
@@ -186,6 +196,18 @@ button {
 #searchIcon:hover {
     transform: scale(1.1);
     transition: .5s ease;
+}
+
+.information {
+    visibility: hidden;
+}
+
+.info {
+    visibility: visible;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding-top: 50px;
 }
 
 .imageAndInfo {
@@ -268,12 +290,6 @@ button {
     color: #757575;
 }
 
-.information {
-    display: none;
-    width: 100%;
-    background-color: white;
-}
-
 #linkName {
     text-decoration: none;
     color: #C2185B;
@@ -287,19 +303,17 @@ button {
 }
 
 #map {
-    margin-bottom: 30px;
     height: 475px;
     width: 100%;
 }
 
 @media (max-width: 750px) {
-
-    html {
-        width: 100%;
+    #landingPage {
+        height: 350px;
     }
     .title {
         width: 100%;
-        top: 19%;
+        top: 24%;
     }
     .title h1 {
         font-size: 20px;

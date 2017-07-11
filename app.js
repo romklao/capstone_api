@@ -47,13 +47,15 @@ function displaySearchData(data) {
         initMap();
 
         var bounds = new google.maps.LatLngBounds();
+        console.log('bounds', bounds)
 
         if(!data.response.groups) {
-            alert("no results");
+            $('.mapWrap').removeClass('mapWrapShown');
+            swal("No results!")
             return 
         }
         data.response.groups[0].items.forEach(function(item) {
-            console.log('item', item)
+            // console.log('item', item)
             if (item.venue.photos.groups[0]) {
                 var photoInfo = item.venue.photos.groups[0].items[0];
                 var prefix = photoInfo.prefix;
@@ -140,18 +142,29 @@ function displaySearchData(data) {
 function searchSubmit() {
     $('#js-search-form').submit(function(event) {
         event.preventDefault();
-        $('.information').show();
-        var searchLocation = $(this).find('#js-input').val();
-        var category = $('form input[type=radio]:checked').val();
-        console.log('category', category);
-        getDataFromApi(searchLocation, category, displaySearchData);
-       
+        
+        var jsInput = $('#js-input');
+
+        if (jsInput.val()) {
+            var searchLocation = jsInput.val();
+            var category = $('form input[type=radio]:checked').val();
+            console.log('category', category);
+            getDataFromApi(searchLocation, category, displaySearchData);
+
+            jsInput.val('');
+            $('.information').addClass('info');
+            $('.mapWrap').addClass('mapWrapShown');
+
+        } else if (!jsInput.val()) {
+            swal("Please enter a city");
+        }
     });
+
 }
 
 $(function() {
     searchSubmit();
-    console.log('hi')
+    console.log('hi');
 });
 
 
