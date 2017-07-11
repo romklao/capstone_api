@@ -50,15 +50,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-}
-
-.mapWrap {
-    visibility: hidden;
-}
-
-.mapWrapShown {
-    visibility: visible;
-    margin-top: 100px;
+    height: 100%;
 }
 
 header {
@@ -199,7 +191,9 @@ input + img {
 }
 
 .information {
-    visibility: hidden;
+    display: none;
+    background-color: white;
+    padding-top: 50px;
 }
 
 .info {
@@ -208,6 +202,15 @@ input + img {
     background-color: white;
     margin: 0;
     padding-top: 50px;
+}
+
+.mapWrap {
+    visibility: hidden;
+}
+
+.mapWrapShown {
+    visibility: visible;
+    margin-top: 100px;
 }
 
 .imageAndInfo {

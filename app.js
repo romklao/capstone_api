@@ -142,7 +142,7 @@ function searchSubmit() {
 
         if (!jsInput.val()) {
             $('.mapWrap').removeClass('mapWrapShown');
-            $('.information').removeClass('info');
+            $('.information').hide();
             swal("Please enter a city");
 
         } else {
@@ -151,11 +151,13 @@ function searchSubmit() {
 
             getDataFromApi(searchLocation, category, function(data) {
                 if (data && data.response.groups) {
-                    $('.information').addClass('info');
+                    $('.information').show();
                     $('.mapWrap').addClass('mapWrapShown');
                     displaySearchData(data);
 
                 } else {
+                    $('.mapWrap').removeClass('mapWrapShown');
+                    $('.information').hide();
                     swal("No results!");
                 }
             });
