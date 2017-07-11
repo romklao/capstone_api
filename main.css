@@ -137,6 +137,22 @@ input + img {
             box-shadow: 0 7px 6px -6px #DB84AF;
 }
 
+input::-webkit-input-placeholder {
+color: #D22986 !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: #D22986 !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #D22986 !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: #D22986 !important;  
+}
+
 #js-input {
     background: url(../capstone_api/images/flower3-background.jpg) no-repeat center center fixed;
     background-size: cover;
