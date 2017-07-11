@@ -138,8 +138,6 @@ function searchSubmit() {
     $('#js-search-form').submit(function(event) {
         event.preventDefault();
 
-        $('.information').addClass('info');
-        $('.mapWrap').addClass('mapWrapShown');
         var jsInput = $('#js-input');
 
         if (!jsInput.val()) {
@@ -153,11 +151,11 @@ function searchSubmit() {
 
             getDataFromApi(searchLocation, category, function(data) {
                 if (data && data.response.groups) {
+                    $('.information').addClass('info');
+                    $('.mapWrap').addClass('mapWrapShown');
                     displaySearchData(data);
 
                 } else {
-                    $('.mapWrap').removeClass('mapWrapShown');
-                    $('.information').removeClass('info');
                     swal("No results!");
                 }
             });
