@@ -50,8 +50,8 @@ function displaySearchData(data) {
         console.log('bounds', bounds)
 
         if(!data.response.groups) {
-            $('.information').removeClass('info');
             $('.mapWrap').removeClass('mapWrapShown');
+            $('.information').removeClass('info');
             swal("No results!")
             return 
         }
