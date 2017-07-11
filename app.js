@@ -50,6 +50,7 @@ function displaySearchData(data) {
         console.log('bounds', bounds)
 
         if(!data.response.groups) {
+            $('.information').removeClass('info');
             $('.mapWrap').removeClass('mapWrapShown');
             swal("No results!")
             return 
@@ -157,6 +158,9 @@ function searchSubmit() {
 
         } else if (!jsInput.val()) {
             swal("Please enter a city");
+            
+        } else {
+            swal("No results!");
         }
     });
 
