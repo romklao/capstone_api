@@ -158,7 +158,7 @@ function searchSubmit() {
                 } else {
                     $('.mapWrap').removeClass('mapWrapShown');
                     $('.information').hide();
-                    swal("No results!");
+                    swal("No results");
                 }
             });
 
