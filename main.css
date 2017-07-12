@@ -153,6 +153,10 @@ input:-ms-input-placeholder {
 color: #D22986 !important;  
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 #js-input {
     background: url(../capstone_api/images/flower3-background.jpg) no-repeat center center fixed;
     background-size: cover;
