@@ -69,6 +69,7 @@ header {
 header > h2 {
     color: #C2185B;
     font-size: 40px;
+    font-style: italic;
     margin-bottom: 30px;
 }
 
