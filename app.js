@@ -143,7 +143,10 @@ function searchSubmit() {
         if (!jsInput.val()) {
             $('.mapWrap').removeClass('mapWrapShown');
             $('.information').hide();
-            swal("Please enter a city");
+            swal({
+                title: "Please enter a city",
+                confirmButtonColor: "#f48be3",
+            });
 
         } else {
             var searchLocation = jsInput.val();
@@ -158,7 +161,10 @@ function searchSubmit() {
                 } else {
                     $('.mapWrap').removeClass('mapWrapShown');
                     $('.information').hide();
-                    swal("No results");
+                    swal({
+                        title: "No result",
+                        confirmButtonColor: "#f48be3",
+                    });
                 }
             });
 
