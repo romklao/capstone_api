@@ -380,7 +380,7 @@ input:-webkit-autofill:active {
     }
     .showInfo {
         height: 230px;
-        padding: 10px 0px 35px 25px;
+        padding: 10px 0px 35px 60px;
         font-size: 14px;
         margin-left: 0;
         margin-bottom: 20px;
@@ -396,8 +396,8 @@ input:-webkit-autofill:active {
         margin-top: 50px;
     }
     #js-place-info {
-        margin-top: -17px;
-    }
+        width: 100%;
+   }
 
 }
 
