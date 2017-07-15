@@ -63,13 +63,13 @@ function displaySearchData(data) {
             }
 
             currentElement = '<div class="imageAndInfo">'
-            currentElement += '<div class="containerImage">' + 
+            currentElement += '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 containerImage">' + 
                                     '<a href="' + item.venue.url + '" target="_blank">' + '<img class="showImage" src="' + imageLink + '">' +
                                     '<div class="middle">' +
                                         '<div class="text">Visit Website</div>' +
                                     '</div>' + '</a>' +
                               '</div>'
-            currentElement += '<div class="showInfo">'
+            currentElement += '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 showInfo">'
             
             if(item.venue.name) {
                 currentElement += '<p class="name"><a id="linkName" href="' + item.venue.url + '" target="_blank">' +
