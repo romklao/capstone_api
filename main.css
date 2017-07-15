@@ -248,7 +248,7 @@ input:-webkit-autofill:active {
 
 .containerImage {
     height: 277px;
-    border-bottom: 1px solid pink;
+    border-bottom: 1px solid #fcc7d0;
     padding: 37px 10px 37px 10px;
 }
 
@@ -294,7 +294,7 @@ input:-webkit-autofill:active {
     padding: 45px 10px 45px 10px;
     color: #757575;
     font-size: 17px;
-    border-bottom: 1px solid pink;
+    border-bottom: 1px solid #fcc7d0;
 }
 
 .glyphicon-usd {
