@@ -5,11 +5,11 @@
 }
 
 #landingPage {
-    background: url(images/pink5-background.jpg) fixed no-repeat;
+    background: url(images/pink5-background.jpg) fixed;
     background-size: cover;
     height: 705px;
     margin: 0;
-    width: 100%;
+    width: auto;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -240,7 +240,7 @@ input:-webkit-autofill:active {
 }
 
 #js-place-info {
-    width: 70%;
+    width: 80%;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -291,8 +291,7 @@ input:-webkit-autofill:active {
 
 .showInfo {
     height: 277px;
-    padding: 45px;
-    padding-bottom: 40px;
+    padding: 45px 10px 45px 10px;
     color: #757575;
     font-size: 17px;
     border-bottom: 1px solid pink;
@@ -381,7 +380,7 @@ input:-webkit-autofill:active {
     }
     .showInfo {
         height: 230px;
-        padding: 10px 10px 35px 10px;
+        padding: 10px 0px 35px 25px;
         font-size: 14px;
         margin-left: 0;
         margin-bottom: 20px;
