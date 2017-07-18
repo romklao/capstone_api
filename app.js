@@ -162,7 +162,7 @@ function searchSubmit() {
                     $('.mapWrap').removeClass('mapWrapShown');
                     $('.information').hide();
                     swal({
-                        title: "No result",
+                        title: "No results",
                         confirmButtonColor: "#f48be3",
                     });
                 }
