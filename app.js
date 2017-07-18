@@ -39,11 +39,8 @@ function displaySearchData(data) {
     var resultElement = '';
     var currentElement;
     if(data.response) {
-
         initMap();
-
         var bounds = new google.maps.LatLngBounds();
-        console.log('bounds', bounds)
 
         data.response.groups[0].items.forEach(function(item) {
             if (item.venue.photos.groups[0]) {
@@ -56,7 +53,6 @@ function displaySearchData(data) {
             else {
                 return 
             }
-
             currentElement = '<div class="imageAndInfo">'
             currentElement += '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 containerImage">' + 
                                     '<a href="' + item.venue.url + '" target="_blank">' + '<img class="showImage" src="' + imageLink + '">' +
@@ -132,7 +128,6 @@ function displaySearchData(data) {
 function searchSubmit() {
     $('#js-search-form').submit(function(event) {
         event.preventDefault();
-
         var jsInput = $('#js-input');
 
         if (!jsInput.val()) {
@@ -142,7 +137,6 @@ function searchSubmit() {
                 title: "Please enter a city",
                 confirmButtonColor: "#f48be3",
             });
-
         } else {
             var searchLocation = jsInput.val();
             var category = $('form input[type=radio]:checked').val();
@@ -152,7 +146,6 @@ function searchSubmit() {
                     $('.information').show();
                     $('.mapWrap').addClass('mapWrapShown');
                     displaySearchData(data);
-
                 } else {
                     $('.mapWrap').removeClass('mapWrapShown');
                     $('.information').hide();
