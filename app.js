@@ -1,14 +1,12 @@
-
 'use strict'
 
 var FOURSQUARE_BASE_URL = 'https://api.foursquare.com/v2/venues/explore';
 var version = '20170101';
-var client_id = 'MY3IL31RJIXONBRRWUZ4W444CAXYRBL2WDJTA4X2RV3WLJBW';
-var client_secret = 'FVVETISC243FKU03APPTF5KX53KMEJAHTKUX0IFAHCQVMIDQ';
+var client_Id = 'MY3IL31RJIXONBRRWUZ4W444CAXYRBL2WDJTA4X2RV3WLJBW';
+var client_Secret = 'FVVETISC243FKU03APPTF5KX53KMEJAHTKUX0IFAHCQVMIDQ';
 var map;
 
 function getDataFromApi(location, category, callback) {
-    console.log('getdata')
     var settings = {
         url: FOURSQUARE_BASE_URL,
         data: {
@@ -19,15 +17,14 @@ function getDataFromApi(location, category, callback) {
             venuePhotos: '1',
             radius: '10000',
             v: version,
-            client_id: client_id,
-            client_secret: client_secret
+            client_id: client_Id,
+            client_secret: client_Secret
         },
         dataType: 'JSONP',
         type: 'GET',
         success: callback
     };
     $.ajax(settings);
-    console.log('settings');
 }
 
 function initMap() {
@@ -42,7 +39,6 @@ function displaySearchData(data) {
     var resultElement = '';
     var currentElement;
     if(data.response) {
-        console.log('data', data);
 
         initMap();
 
@@ -50,7 +46,6 @@ function displaySearchData(data) {
         console.log('bounds', bounds)
 
         data.response.groups[0].items.forEach(function(item) {
-            // console.log('item', item)
             if (item.venue.photos.groups[0]) {
                 var photoInfo = item.venue.photos.groups[0].items[0];
                 var prefix = photoInfo.prefix;
@@ -167,17 +162,13 @@ function searchSubmit() {
                     });
                 }
             });
-
             jsInput.val('');
-
         }
     });
-
 }
 
 $(function() {
     searchSubmit();
-    console.log('hi');
 });
 
 
