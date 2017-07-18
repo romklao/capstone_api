@@ -110,7 +110,7 @@ function displaySearchData(data) {
               $('.priceToolTip').tooltip();
             });
 
-            bounds.extend(marker.getPosition());                   
+            bounds.extend(marker.getPosition());
             console.log('results');
         
         });
