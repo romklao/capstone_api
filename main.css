@@ -216,6 +216,7 @@ input:-webkit-autofill:active {
     display: none;
     background-color: white;
     padding-top: 30px;
+    margin: 0;
 }
 
 .info {
@@ -381,7 +382,7 @@ input:-webkit-autofill:active {
     }
     .showInfo {
         height: 210px;
-        padding: 10px 0px 35px 60px;
+        padding: 10px 0px 35px 40px;
         font-size: 14px;
         margin-left: 0;
         margin-bottom: 20px;
