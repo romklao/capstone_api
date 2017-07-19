@@ -1,5 +1,5 @@
 # Romantic Places
- 
+<img src="images/landingPage.png" width="150" height="100"> 
 Live Demo : https://romklao.github.io/capstone_api/
 
 # Introduction
